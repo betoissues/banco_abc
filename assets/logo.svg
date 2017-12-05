@@ -45,7 +45,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -56,25 +56,26 @@
      transform="translate(0,-280.06665)">
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888855px;line-height:1.25;font-family:Montserrat;-inkscape-font-specification:Montserrat;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332;"
-       x="0.75457478"
-       y="291.60095"
-       id="text5057"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.48968983px;line-height:1.25;font-family:Montserrat;-inkscape-font-specification:Montserrat;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.24051909;"
+       x="-195.44293"
+       y="218.88269"
+       id="text5057"
+       transform="rotate(-45.069928)"><tspan
          sodipodi:role="line"
          id="tspan5055"
-         x="0.75457478"
-         y="291.60095"
-         style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:14.8166666px;font-family:Montserrat;-inkscape-font-specification:'Montserrat Ultra-Bold';stroke-width:0.26458332;fill:#ffffff;">ABC</tspan></text>
+         x="-195.44293"
+         y="218.88269"
+         style="font-style:normal;font-variant:normal;font-weight:800;font-stretch:normal;font-size:13.46906948px;font-family:Montserrat;-inkscape-font-specification:'Montserrat Ultra-Bold';fill:#ffffff;stroke-width:0.24051909;">E</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888855px;line-height:1.25;font-family:Montserrat;-inkscape-font-specification:Montserrat;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332;"
-       x="2.1858115"
-       y="296.01089"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.68167257px;line-height:1.25;font-family:Montserrat;-inkscape-font-specification:Montserrat;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.30437532;"
+       x="6.8615031"
+       y="296.79987"
        id="text5061"><tspan
          sodipodi:role="line"
          id="tspan5059"
-         x="2.1858115"
-         y="296.01089"
-         style="font-size:5.64444447px;stroke-width:0.26458332;fill:#ffffff;">FINANZAS</tspan></text>
+         x="6.8615031"
+         y="296.79987"
+         style="font-size:6.49334049px;fill:#ffffff;stroke-width:0.30437532;">BANK</tspan></text>
   </g>
 </svg>

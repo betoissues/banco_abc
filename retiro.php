@@ -10,7 +10,7 @@
         header('Location: index.php');
     }
     ?>
-    <title>Retiro | Banco ABC</title>
+    <title>Retiro | E Bank</title>
 </head>
 <body class="blue-grey lighten-5">
     <?php include('include/menu.php'); ?>

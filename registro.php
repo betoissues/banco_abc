@@ -2,7 +2,7 @@
 <html>
 <head>
     <?php include("include/head.php"); ?>
-    <title>Registro | Banco ABC</title>
+    <title>Registro | E Bank</title>
     <meta charset="utf-8">
 </head>
 <body>

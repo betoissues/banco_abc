@@ -75,37 +75,27 @@ class GestionRegistro
 		}
 		$this->id_cuenta=$numcuentafinal;
 	}
+
 	public function numcliente() //Funcion para generar un numero de cliente que no haya sido registrado
 	{
 		include("conexion.php");
+
+		$numero=0;
+		//CONSULTA
 		$sql='SELECT id_cliente FROM cliente';
 		$consulta=$connection->query($sql);
-
-		$parar=false;
-		while($parar==false)
+		//Crear numero
+		while($numclientes = $consulta->fetch_assoc())
 		{
-			//Generar numero aleatorio
-			$numaleatorio=mt_rand(0,400);
-
-			//Comprobar que el numero de cuenta no este registrado
-			if($consulta->fetch_assoc()==false)
+			if($numclientes['id_cliente']>$numero)
 			{
-				$parar=true;
-			}
-			else
-			{
-				while($numclientes = $consulta->fetch_assoc())
-				{
-					if($numaleatorio!=$numclientes['id_cliente'])
-					{
-						$parar=true;
-					}
-
-				}
+				$numero=$numclientes['id_cliente'];
 			}
 		}
-		$this->id_cliente=$numaleatorio;
+		$numero++;
+		$this->id_cliente=$numero;
 	}
+
 	public function validarcedula() //Funcion para validar la cedula ingresada
 	{
 		include("conexion.php");
@@ -171,10 +161,13 @@ class GestionUsuario
 	{
 		$this->id_cuenta=$numcuenta;
 	}
+
+
 	public function getsaldo()
 	{
 		include("conexion.php");
-		$sql="SELECT * FROM  cuenta";
+		$cta = $this->getncuenta();
+		$sql="SELECT * FROM cuenta WHERE id_cuenta=$cta";
 		$consulta=$connection->query($sql);
 		while($cuentas=$consulta->fetch_assoc())
 		{
@@ -207,34 +200,24 @@ class GestionUsuario
 	public function num_transaccion()
 	{
 		include("conexion.php");
+		$numero=0;
+		//Ver transacciones
 		$sql='SELECT id_trans FROM transaccion';
 		$consulta=$connection->query($sql);
 
-		$parar=false;
-		while($parar==false)
+		//Generar numero de transaccion
+		while($numtrans = $consulta->fetch_assoc())
 		{
-			//Generar numero aleatorio
-			$numaleatorio=mt_rand(0,1000);
-
-			//Comprobar que el numero de transaccion no este registrado
-			if($consulta->fetch_assoc()==false)
+			if($numtrans['id_trans']>$numero)
 			{
-				$parar=true;
-			}
-			else
-			{
-				while($numtrans = $consulta->fetch_assoc())
-				{
-					if($numaleatorio!=$numtrans['id_trans'])
-					{
-						$parar=true;
-					}
-
-				}
+				$numero=$numtrans['id_trans'];
 			}
 		}
-		return $numaleatorio;
+		$numero++;
+
+		return $numero;
 	}
+
 	public function validarTransferencia($monto)
 	{
 		include("conexion.php");

@@ -9,7 +9,7 @@
         header('Location: index.php');
     }
     ?>
-    <title>Depósito | Banco ABC</title>
+    <title>Depósito | E Bank</title>
 </head>
 <body class="blue-grey lighten-5">
     <?php include('include/menu.php'); ?>

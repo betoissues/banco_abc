@@ -10,7 +10,7 @@
 		header('Location: index.php');
 	}
 	?>
-	<title>Transferencia | Banco ABC</title>
+	<title>Transferencia | E Bank</title>
 
 </head>
 <body class="blue-grey lighten-5">

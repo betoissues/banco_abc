@@ -1,7 +1,11 @@
+<script  type="text/javascript">
+function failed(){
+Materialize.toast('I am a toast!', 4000);
+}
 <?php
 include("conexion.php");
 include("gestion.php");
-if(isset($_POST['user']) && !empty($_POST['user']) && isset($_POST['pass']) && !empty($_POST['pass']))	
+if(isset($_POST['user']) && !empty($_POST['user']) && isset($_POST['pass']) && !empty($_POST['pass']))
 {
 
         $user=$_POST['user'];
@@ -20,9 +24,10 @@ if(isset($_POST['user']) && !empty($_POST['user']) && isset($_POST['pass']) && !
                 }
                 else
                 {
-                        echo "NO ENTRASTE";
+                    header('Location: index.php?failed=true');
                 }
         }
 }
 
 ?>
+</script>

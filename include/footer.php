@@ -2,7 +2,7 @@
     <div class="footer-copyright">
         <div class="row">
             <div class="col s12">
-                © 2017 Todos los derechos reservados. | Banco ABC
+                © 2017 Todos los derechos reservados. | E Bank
             </div>
         </div>
     </div>

@@ -9,7 +9,7 @@
         header("Location: index.php");
     }
     ?>
-    <title>Dashboard | Banco ABC </title>
+    <title>Dashboard | E Bank</title>
 </head>
 <body class="blue-grey lighten-5">
     <?php include('include/menu.php'); ?>
