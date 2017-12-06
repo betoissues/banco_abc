@@ -21,8 +21,8 @@
                         <h2>Depósito de Fondos</h2>
                         <div class="row">
                             <div class="input-field col s12 m6">
-                                <input type="text" name="deposito" name="saldo" required>
-                                <label for="deposito">Monto</label>
+                                <input type="number" min="0" step="0.01" name="deposito" name="saldo" class="validate" required>
+                                <label for="deposito" data-error="Ingrese un valor válido. Hasta dos (2) decimales.">Monto</label>
                             </div>
                         </div>
                         <div class="row">
@@ -51,7 +51,7 @@
                             $consulta=$consulta->fetch_assoc();
 
                             echo "<h3>Información de Transacción</h3>";
-                            echo "<div class='card-panel green darken-1 white-text'>Se han depositado ".$_POST["deposito"]." con éxito.</div>";
+                            echo "<div class='card-panel green darken-1 white-text'>Se han depositado ".number_format($_POST["deposito"], 2)." con éxito.</div>";
                             echo "<table>";
                             echo "<thead>";
                             echo "<tr>";
@@ -60,8 +60,8 @@
                             echo "</tr>";
                             echo "</thead>";
                             echo "<tr>";
-                            echo "<td>".($_POST["deposito"]*0.0125)."</td>";
-                            echo "<td>".$consulta['saldo']."</td>";
+                            echo "<td>".number_format(($_POST["deposito"]*0.0125), 2)."</td>";
+                            echo "<td>".number_format($consulta['saldo'], 2)."</td>";
                             echo "</tr>";
                             echo "</table>";
                         }

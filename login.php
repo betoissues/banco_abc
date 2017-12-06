@@ -1,7 +1,3 @@
-<script  type="text/javascript">
-function failed(){
-Materialize.toast('I am a toast!', 4000);
-}
 <?php
 include("conexion.php");
 include("gestion.php");
@@ -30,4 +26,3 @@ if(isset($_POST['user']) && !empty($_POST['user']) && isset($_POST['pass']) && !
 }
 
 ?>
-</script>

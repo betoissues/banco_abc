@@ -29,13 +29,13 @@
 						</div>
 						<div class="row">
 							<div class="input-field col s12 m6">
-								<input type="text" name="transferir" required>
-								<label for="transferir">Monto</label>
+								<input type="number" step="0.01" min="0" class="validate" name="transferir" required>
+								<label for="transferir" data-error="Ingrese un valor válido. Hasta dos (2) decimales.">Monto</label>
 							</div>
 						</div>
 						<div class="row">
 							<div class="input-field col s12">
-								<input type="text" name="numc" required>
+								<input type="number" name="numc" class="validate" required>
 								<label for="numc">N° de Cuenta</label>
 							</div>
 						</div>
@@ -48,7 +48,7 @@
 					if($_POST["transferir"]<0)
 					{
 						echo "<h3>Información de Transacción</h3>";
-						echo "Estimado Cliente , NO se puede ingresar montos negativos.";
+						echo "<div class='card-panel red darken-2 white-text'>No se pueden transferir valores negativos.</div>";
 					}
 					else
 					{
@@ -77,7 +77,7 @@
 							$consulta=$consulta->fetch_assoc();
 
 							echo "<h3>Información de Transacción</h3>";
-							echo "<div class='card-panel green darken-1 white-text'>Se han transferido ".$_POST["transferir"]." con éxito.</div>";
+							echo "<div class='card-panel green darken-1 white-text'>Se han transferido ".number_format($_POST["transferir"], 2)." con éxito.</div>";
 							echo "<table>";
 							echo "<thead>";
 							echo "<tr>";
@@ -85,7 +85,7 @@
 							echo "</tr>";
 							echo "</thead>";
 							echo "<tr>";
-							echo "<td>".$consulta['saldo']."</td>";
+							echo "<td>".number_format($consulta['saldo'], 2)."</td>";
 							echo "</tr>";
 							echo "</table>";
 						}

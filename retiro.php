@@ -29,8 +29,8 @@
                     <div class="row">
                         <div class="input-field col s12 m6">
                             <i class="material-icons prefix">monetization_on</i>
-                            <input id="retirar" name="retirar" type="text">
-                            <label for="retirar">Monto</label>
+                            <input id="retirar" name="retirar" type="number" step="0.01" min="0" class="validate" required>
+                            <label for="retirar" data-error="Ingrese un valor válido. Hasta dos (2) decimales.">Monto</label>
                         </div>
                     </div>
                     <button class="btn waves-effect waves-light" type="submit" name="enviar" value="Retirar">
@@ -62,7 +62,7 @@
                         else
                         {
                             echo "<h3>Informacion de Transacción</h3>";
-                            echo "<div class='card-panel red darken-2 white-text>Solo se pueden realizar un máximo de 4 retiros por día.</div>";
+                            echo "<div class='card-panel red darken-2 white-text'>Solo se pueden realizar un máximo de 4 retiros por día.</div>";
                         }
                     }
                     else
@@ -74,7 +74,7 @@
                         $consulta=$consulta->fetch_assoc();
 
                         echo "<h3>Información de Transacción</h3>";
-                        echo "<div class='card-panel green darken-1 white-text'>Se han retirado ".$_POST["retirar"]." con éxito.</div>";
+                        echo "<div class='card-panel green darken-1 white-text'>Se han retirado ".number_format($_POST["retirar"], 2)." con éxito.</div>";
                         echo "<table>";
                         echo "<thead>";
                         echo "<tr>";
@@ -82,7 +82,7 @@
                         echo "</tr>";
                         echo "</thead>";
                         echo "<tr>";
-                        echo "<td>".$consulta['saldo']."</td>";
+                        echo "<td>".number_format($consulta['saldo'], 2)."</td>";
                         echo "</tr>";
                         echo "</table>";
                     }

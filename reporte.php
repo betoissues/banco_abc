@@ -64,8 +64,7 @@
 					echo '<td>'.$tds['id_trans'].'</td>';
 					echo '<td>'.$tds['nombre'].'</td>';
 					echo '<td>'.$tds['fecha'].'</td>';
-					echo '<td>'.$tds['monto'].'</td>';
-					// echo '<td><a href="verymod.php?id='.$tds['Nombre'].'">Eliminar<a/></td>';
+					echo '<td>'.number_format($tds['monto'], 2).'</td>';
 					echo "</tr>";
 				}
 				echo "</table>";
@@ -83,7 +82,7 @@
 				echo "</thead>";
 				$inicio=$_POST['fechainicial'];
 				$final=$_POST['fechafinal'];
-				$sql = "SELECT id_trans,nombre,fecha,monto from transaccion WHERE id_cuenta='$ncuenta' AND  fecha between '$inicio' AND '$final' order by fecha ";
+				$sql = "SELECT id_trans,nombre,fecha,monto from transaccion WHERE id_cuenta='$ncuenta' AND cast(fecha as date) BETWEEN '$inicio' AND '$final' order by fecha ";
 				$consulta=$connection->query($sql);
 				while($tds = $consulta->fetch_assoc())
 				{
@@ -91,7 +90,7 @@
 					echo '<td>'.$tds['id_trans'].'</td>';
 					echo '<td>'.$tds['nombre'].'</td>';
 					echo '<td>'.$tds['fecha'].'</td>';
-					echo '<td>'.$tds['monto'].'</td>';
+					echo '<td>'.number_format($tds['monto'], 2).'</td>';
 					echo "</tr>";
 				}
 				echo "</table>";
