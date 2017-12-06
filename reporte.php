@@ -95,10 +95,6 @@
 				}
 				echo "</table>";
 			}
-
-
-
-
 			?>
 
 		</section>
