@@ -14,6 +14,7 @@
 				<li><a href="index.php"><i class="material-icons">home</i></a></li>
 				<!-- Dropdown Trigger -->
 				<li><a class="dropdown-button" href="#!" data-activates="droptransacciones">Transacciones<i class="material-icons right">arrow_drop_down</i></a></li>
+				<li><a href="promociones.php">Promociones</a></li>
 				<li><a href="reporte.php">Reporte</a></li>
 				<li><a href="salir.php"><i class="material-icons right">exit_to_app</i>Salir</a></li>
 			</ul>
@@ -24,6 +25,7 @@
 				<li><a href="deposito.php">Depósito</a></li>
 				<li><a href="retiro.php">Retiro</a></li>
 				<li><a href="transferencia.php">Transferencias</a></li>
+				<li><a href="promociones.php">Promociones</a></li>
 				<li><a href="reporte.php">Reporte</a></li>
 				<li><a href="salir.php"><i class="material-icons right">exit_to_app</i>Salir</a></li>
 			</ul>
