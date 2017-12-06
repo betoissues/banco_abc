@@ -16,7 +16,7 @@
         header("Location: index.php");
     }
     ?>
-    <title>Promociones | Banco ABC </title>
+    <title>Promociones | E Bank </title>
 </head>
 <body class="blue-grey lighten-5">
     <?php include('include/menu.php'); ?>
