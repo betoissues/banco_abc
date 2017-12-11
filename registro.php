@@ -82,11 +82,11 @@ isset($_POST['Telefono']) && !empty($_POST['Telefono']) &&isset($_POST['Cedula']
 
         if($gestion->validarcedula()==false)
         {
-            echo "Cédula ya ha sido utilizada.";
+            header('Location: registro.php?failed=cedula');
         }
         elseif ($gestion->validarusuario()==false)
         {
-            echo "Usuario ya ha sido utilizado.";
+            header('Location: registro.php?failed=usuario');
         }
     }
     else
@@ -96,6 +96,22 @@ isset($_POST['Telefono']) && !empty($_POST['Telefono']) &&isset($_POST['Cedula']
         $gestion->numcliente();
         $gestion->registrar();
         header("Location: index.php");
+    }
+}
+
+if(isset($_GET['failed'])){
+    if($_GET['failed'] == 'cedula'){
+        echo "<script type='text/javascript'>
+        $(function(){
+            Materialize.toast('Cédula ya existente.', 4000, 'red darken-2 white-text')
+        });
+        </script>";
+    }else if($_GET['failed'] == 'usuario'){
+        echo "<script type='text/javascript'>
+        $(function(){
+            Materialize.toast('Usuario ya existente.', 4000, 'red darken-2 white-text')
+        });
+        </script>";
     }
 }
 ?>
