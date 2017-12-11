@@ -343,7 +343,7 @@ class GestionUsuario
 			$insertar=$connection->query($sql);
 
 			$sql = "UPDATE `cuenta` SET `saldo` = '200' WHERE `cuenta`.`id_cuenta` = '$this->id_cuenta'";
-			$this->actualizarDeposito($monto);
+			$this->actualizarDeposito($montofinal);
 
 		}
 		else
